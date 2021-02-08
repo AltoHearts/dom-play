@@ -1,23 +1,108 @@
 <html>
 <head>
     <title>DOM Play</title>
-    <style>
-       /* #clickSpans span {
-            background-color: aqua;
-        } */
+    <meta charset="UTF-8">
+  <meta name="description" content="DOM play assignment for IT 121">
+  <meta name="keywords" content="HTML, CSS, JavaScript">
+  <meta name="author" content="Maria O'Sullivan">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    </style>
+   <link rel="stylesheet" href="styles.css">S
 </head>
 <body>
-      <h1>DOM Play</h1> 
+    <div class="header">
 
+            <h1>WILLIAM SHAKESPEAR'S</h1>
+            <h1 class="sudo-logo">STAR WARS</h1>
+            <h2><em>Verily, A New Hope</em></h2>
+    </div>
+    <div class="divider"></div>
+
+    <div class="row">
+        <div class="column side"></div>     
+
+        <div class="column middle">
+            <div class="scene"><h2>ACT 1, SCENE 2</h2>
+                <h4><u>Aboard the rebel ship</u></h4> </div>
+
+        
+        <div id="clickSpans">
+                <p><em>Enter</em> DARTH VADER,<em> carrying </em> REBEL LEADER 1 <em> by the neck, and </em> STORMTROOPERS.</p>
+
+                        <p> <span data-actor="REBEL1">REBEL 1: <br>
+                            The Death Star plans we could not find herein, <br>
+                            Nor are they on the main computer, Lord. <br>
+                            In short, they are not here, and there's an end.</span></p>
+                        <p><span data-actor="VADER">VADER: <br>
+                            Thou speakest well, my stormtrooper, and yet <br>
+                            Not well upon my ear the message falls. <br>
+                            I turn to thee thou rebel. Aye, I lift <br>
+                            Thy head above my own. Thou canst now choose <br>
+                            To keep thy secretes lock'd safe in head, <br>
+                            And therefore lose the life thou holdest dear, <br>
+                            Or else to keep thy head and, thus, thy life. <br>
+                            My paitence runneth quickly out much like <br>
+                            The sands across the dunes of Tatooine. <br>
+                            So tell me, else thou diest quick: where shall <br>
+                            We find transmission thou didst intercept? <br>
+                            What hast thou done, say, with those plans?</span> <br>
+                            <dd>[<i>Darth Vadar begings to choke Rebel Leader 1.</i>]</dd></p>
+                        <p><span data-actor="REBEL1">REBEL 1: <br>
+                            - My Lord, <br>
+                            My head and life I value - Certain 'tis!<br>
+                            And yet to thee I must report we have <br>
+                            Not intercepted one transmission! Ahh! <br>
+                            This is a cons'lar ship, nothing more, <br>
+                            On dipomatic mission. Ugh!</span></p>
+                        <p><span data-actor="VADER">VADER: <br>
+                            -Thou knave!<br>
+                            With thy last breath hear thou this word: if this <br>
+                            Is but a cons'lar ship, then where is the <br>
+                            ambassador <i>[rebel Leader 1 dies.]</i> Commander, <br>
+                            prithee, go! <br>
+                            Rend thou this ship apart until the plans <br>
+                            Arre found, and bring me any passengers- <br>
+                            Upon they life, I want them brought alive!<br>
+                            [<i>Exeunt stormtroopers.</i>]<br>
+                            And so another dies by my own hand, <br>
+                            This hand, which now encas'd in blackness is. <br>
+                            O that the fingers of this wretched hand <br>
+                            Had not the pain of suff'ring ever known. <br>
+                            But now my path is join'd unto the dark, <br>
+                            And wicked men - whose hands and fingers move <br>
+                            To crush their foes - are now my company. <br>
+                            So shall my fingers ever undertake <br>
+                            To do more evil, aye, and this- my hand- <br>
+                            Shall do the Emp'ror's bidding evermore. <br>
+                            And thus we see how fingers presage death <br>
+                            And hands become the insturments of Fate. </span> <br>
+                            <br> <dd>[<i>Exit Darth Vader</i>]</dd> </br> </p>
+
+                        <p><em>Enter</em> STORMTROOPERS,<em> searchin. Enter </em> PRINCESS LEIA,<em> holding a blaster.</em></p>
+
+                        <p><span data-actor="TROOPER1">TROOPER 1: <br>
+                            Aye, there is one. My comrades, set for stun!</span>
+                                <dd>[<i>Princess Leia shoots, Stormtrooper 1 dies. <br>
+                                    Stormtroopers stun Princess Leia.</i>]</dd><br></p>
+                        <p><span data-actor="TROOPER2">TROOPER 2: <br>
+                            She shall be well. Go now, inform the dread <br>
+                            Lord Vader we have caught a prisoner. <br>
+                            [<i>Aside:</i>] And may Mos Eisley drinks flow swift and <br>
+                            free <br>
+                            When Vadar grants rewords for work well done! <br></span>
+                            <dd>[<i>Exeunt stormtroopers with Princess Leia.</i>]</dd></p>
+            </div>
+        </div>
+        <div class="column side"></div>     
+    </div>
+<!--
     <div id="clickSpans">
         <p><span data-actor="hamlet">HAMELET: To be or not to be, that is the question.</span></p> 
         <p><span data-actor="skull">SKULL: Don't ask me, I'm only a skull!</span></p> 
         <p><span data-actor="hamlet">HAMELET: Wait what bruh?</span></p> 
         <p><span data-actor="skull"> SKULL: Nothing, I'm only a figment of your imagination</span></p> 
         <p><span data-actor="hamlet">HAMELET:</span></p> 
-    </div>
+    </div> -->
 
         <script>  
                 //spans is var so data is global
@@ -42,9 +127,13 @@
                         if(mySpan.dataset.actor == myActor){   // current actor? highlight
                              mySpan.style.backgroundColor = 'yellow'; 
                              mySpan.style.fontWeight = 'bold';
+                             mySpan.style.color = "black";
+                             mySpan.style.textShadow = "none";
                         }else{  //not current actor? change to white
-                             mySpan.style.backgroundColor = 'white'; 
+                             mySpan.style.backgroundColor = '#050726'; 
                              mySpan.style.fontWeight = "normal";
+                             mySpan.style.color = "lightgoldenrodyellow";
+                             mySpan.textShadow = "2px 2px 2px black";
                          }
 
                     }
