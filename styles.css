@@ -1,0 +1,55 @@
+body {background-image: url(images/STARS2.jpg); }
+
+.header {
+    color: yellow;
+    text-align: center;
+    background-color: #050726;
+    padding: 20px;
+    font-family: Palatino, URW Palladio L, serif, monospace;
+  }
+.sudo-logo{
+    font-family: Impact, fantasy;
+    font-size: 150px;
+    text-shadow: 2px 2px 5px black;
+}
+.divider {
+    padding: 14px 16px;
+    overflow: hidden;
+  }
+.scene {
+    text-align: center;
+}
+/* Column styling */
+  .column {
+    float: left;
+    padding: 15px;
+  }
+  
+  .column.side {
+    width: 15%;
+  }
+  
+  .column.middle {
+    width: 70%;
+    background-color: #050726;
+    color: lightgoldenrodyellow;
+    text-shadow: 2px 2px 2px black;
+    font-family: Andale Mono, monospace;
+  }
+  
+  /* Clears floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .column.side, .column.middle {
+      width: 100%;
+    }
+    .sudo-logo{
+        font-family: Impact, fantasy;
+        font-size: 60px;
+    }
+  }
